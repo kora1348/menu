@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { OnlineModule } from './views/online/online.module';
+import { NavigationService } from './navigation.service';
+
 
 @NgModule({
   declarations: [
@@ -12,9 +14,10 @@ import { OnlineModule } from './views/online/online.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    OnlineModule,
+    FormsModule
+
   ],
-  providers: [],
+  providers: [NavigationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
